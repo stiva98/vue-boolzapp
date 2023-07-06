@@ -33,13 +33,20 @@ body {
     transform: translateX(-50%);
     top: -13%;
 }
+.container-mini {
+    width: 30rem;
+    margin: 0 auto;
+    height: calc(100vh - (6.25rem + 3.75rem));
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.container-input {
+    flex-grow: 1;
+}
 /*
  Inizializzo la chat dell'header e del main
 */
-.header-chat {
-    height: 3.125rem;
-    background-color: #eaeaea;
-}
 .row {
     display: flex;
 }
@@ -49,18 +56,89 @@ body {
 .col-6 {
     width: 60%;
 }
-.header-1 {
-    height: 3.125rem;
+.header-chat {
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-right: 1px solid gray;
 }
-.header-2 {
-    height: 3.125rem;
+.img-profile {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: .625rem;
 }
-.main-1 {
-    background-color: white;
-    height: calc(100vh - 9.6rem);
+.col-header {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
 }
-.main-2 {
+.col-mini-2 {
+    vertical-align: middle;
+}
+.icons {
+    color: #b1b1b1;
+    cursor: pointer;
+}
+.i-pad {
+    padding: 0 .625rem;
+}
+.name {
+    font-size: x-small;
+    font-weight: bold;
+}
+.hour {
+    font-size: xx-small;
+}
+.margin {
+    margin-left: .5rem;
+}
+.main-chat {
     background-image: url(/img/mine.jpg);
-    height: calc(100vh - 9.6rem);
+    height: calc(100vh - 6.25rem);
+}
+.receveid {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+    margin-top: 1.25rem
+}
+.sent {
+    background-color: white;
+    align-self: flex-start;
+    margin-top: .625rem;
+}
+.dimension {
+    width: 15.625rem;
+    border-radius: .625rem;
+    display: flex;
+    justify-content: space-between;
+}
+.messagge {
+    font-size: small;
+    padding: 0.625rem 0 0.625rem 0.625rem;
+}
+.messagge-hour {
+    font-size: xx-small;
+    align-self: flex-end;
+    padding: .125rem;
+}
+.footer-input {
+    height: 3.75rem;
+    width: 100%;
+    background-color: #f3eeea;
+    display: flex;
+    align-items: center;
+}
+.i-footer {
+    color: #6b7376;
+    padding: .9375rem;
+    cursor: pointer;
+}
+.dimension-input {
+    width: 100%;
+    padding: .625rem .3125rem;
+    border-radius: .3125rem;
+    border: none;
 }

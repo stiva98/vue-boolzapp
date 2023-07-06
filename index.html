@@ -11,13 +11,13 @@
     <!--VUE-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <!--BOOTSTRAP-->
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">-->
-
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--FONTS AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
@@ -29,28 +29,85 @@
         <main class="main-page">
             <div id="app"> <!--Inserisco vue-->
                 <div class="container">
-                    <section>
-                        <header class="header-chat">
-                            <div class="row">
-                                <div class="col-4 header-1">
-
+                    <div class="row">
+                        <div class="col-4">
+                            <header class="header-chat">
+                                <div class="col-header">
+                                    <div class="col-mini-1">
+                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="img-profile">
+                                    </div>
+                                    <div class="col-mini-2">
+                                        <p class="name">
+                                            Samuele
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="col-6 header-2">
-
+                                <div class="col-header">
+                                    <i class="fa-solid fa-circle-notch icons"></i>
+                                    <i class="fa-solid fa-message icons i-pad"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical icons"></i>
                                 </div>
-                            </div>
-                        </header>
-                        <main class="main-chat">
-                            <div class="row">
-                                <div class="col-4 main-1">
-
+                            </header>
+                        </div>
+                        <div class="col-6">
+                            <header class="header-chat">
+                                <div class="col-header">
+                                    <div class="col-mini-1">
+                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="img-profile">
+                                    </div>
+                                    <div class="col-mini-2">
+                                        <p class="name margin">
+                                            Michele
+                                        </p>
+                                            
+                                        <p class="hour margin">
+                                            Ultimo accesso ore 12:00
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="col-6 main-2">
-                                    
+                                <div class="col-header">
+                                    <i class="fa-solid fa-magnifying-glass icons"></i>
+                                    <i class="fa-solid fa-paperclip icons i-pad"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical icons"></i>
                                 </div>
-                            </div>
-                        </main>
-                    </section>
+                            </header>
+                            <main class="main-chat">
+                                <div class="container-mini">
+                                    <div class="receveid dimension">
+                                        <p class="messagge">
+                                            Hai portato a spasso il cane?
+                                        </p>
+                                        <p class="messagge-hour">
+                                            15:30
+                                        </p>
+                                    </div>
+                                    <div class="receveid dimension">
+                                        <p class="messagge">
+                                            Ricordati di stendere i panni?
+                                        </p>
+                                        <p class="messagge-hour">
+                                            15:50
+                                        </p>
+                                    </div>
+                                    <div class="sent dimension">
+                                        <p class="messagge">
+                                            Tutto fatto!
+                                        </p>
+                                        <p class="messagge-hour">
+                                            16:15
+                                        </p>
+                                    </div>
+                                </div>
+                                <footer class="footer-input">
+                                    <i class="fa-solid fa-face-smile i-footer"></i>
+                                    <div class="container-input">
+                                        <input type="text" class="dimension-input" placeholder="Scrivi un messaggio">
+                                    </div>
+                                    <i class="fa-solid fa-microphone i-footer"></i>
+                                </footer>
+                            </main>
+                        </div>
+                    </div>
                 </div>
             </div>
 
