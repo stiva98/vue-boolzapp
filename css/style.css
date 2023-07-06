@@ -44,6 +44,10 @@ body {
 .container-input {
     flex-grow: 1;
 }
+.container-link {
+    display: flex;
+    background-color: #8edafc;
+}
 /*
  Inizializzo la chat dell'header e del main
 */
@@ -99,6 +103,10 @@ body {
     background-image: url(/img/mine.jpg);
     height: calc(100vh - 6.25rem);
 }
+.main-chat-2 {
+    height: calc(100vh - 6.25rem);
+    border: 1px solid black;
+}
 .receveid {
     background-color: #d5f9ba;
     align-self: flex-end;
@@ -141,4 +149,26 @@ body {
     padding: .625rem .3125rem;
     border-radius: .3125rem;
     border: none;
+}
+.link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: .625rem;
+    background-color: #f2fbff;
+}
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.notification {
+    color: #8edafc;
+}
+.color-link {
+    color: gray;
 }
