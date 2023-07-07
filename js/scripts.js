@@ -189,6 +189,15 @@ createApp({
             };
             this.contacts[this.active].messages.push(newMsgReceived);
             this.newMsg = '';
+            setTimeout(() => {
+                const newMsgSent = {
+                    date: '10/01/2020 16:15:01',
+                    message: 'Ok',
+                    status: 'sent',
+                };
+                this.contacts[this.active].messages.push(newMsgSent);
+            }, 1000);
         }
+
     }
 }).mount('#app');
