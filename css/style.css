@@ -111,7 +111,7 @@ body {
 .main-chat-2 {
     height: calc(100vh - 6.25rem);
 }
-.receveid {
+.received {
     background-color: #d5f9ba;
     align-self: flex-end;
     margin-top: 1.25rem
@@ -221,6 +221,7 @@ body {
     justify-content: space-between;
     padding: .5rem;
     border-bottom: 1px solid lightgrey;
+    cursor: pointer;
 }
 .photo {
     display: flex;
@@ -229,6 +230,12 @@ body {
     font-size: xx-small;
     align-self: flex-start;
     padding: .125rem;
+}
+.active-msg {
+    background-color: #dbdbd2;
+}
+.chat:hover {
+    background-color: #dbdbd2;
 }
 
  

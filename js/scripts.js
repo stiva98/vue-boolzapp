@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            active: 0,
             contacts: [
                 {
                 name: 'Michele',
@@ -166,6 +167,17 @@ createApp({
                 ],
                 }
                 ]
+        }
+    },
+    methods:{
+        activeSelected(index) {
+            if (index == this.active) {
+                return 'active-msg'
+            }
+        },
+        changeChat(index) {
+            //console.log(index)
+            this.active = index
         }
     }
 }).mount('#app');

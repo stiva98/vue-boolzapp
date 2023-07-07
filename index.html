@@ -69,7 +69,7 @@
                                     </div>
                                 </section>
                                 <section class="box-chat">
-                                    <div class="chat" v-for="singleContacts in contacts">
+                                    <div class="chat" v-for="(singleContacts, index) in contacts" :class="activeSelected(index)" @click="changeChat(index)">
                                         <div class="photo">
                                             <img :src="singleContacts.avatar" :alt="singleContacts.name" class="img-profile">
                                             <div class="name-chat">
@@ -82,7 +82,7 @@
                                             </div>
                                         </div>
                                         <p class="chat-hour">
-                                            15:30
+                                            12:00
                                         </p>
                                     </div>
                                 </section>
@@ -92,11 +92,11 @@
                             <header class="header-chat">
                                 <div class="col-header">
                                     <div class="col-mini-1">
-                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="img-profile">
+                                        <img :src="contacts[active].avatar" :alt="contacts[active].name" class="img-profile">
                                     </div>
                                     <div class="col-mini-2">
                                         <p class="name margin">
-                                            Michele
+                                            {{ contacts[active].name }}
                                         </p>
                                             
                                         <p class="hour margin">
@@ -112,15 +112,15 @@
                             </header>
                             <main class="main-chat">
                                 <div class="container-mini">
-                                    <div class="receveid dimension">
+                                    <div class="dimension" v-for="singleMessage in contacts[active].messages" :class="[singleMessage.status]">
                                         <p class="messagge">
-                                            Hai portato a spasso il cane?
+                                            {{singleMessage.message}}
                                         </p>
                                         <p class="messagge-hour">
-                                            15:30
+                                            {{singleMessage.date}}
                                         </p>
                                     </div>
-                                    <div class="receveid dimension">
+                                    <!--<div class="receveid dimension">
                                         <p class="messagge">
                                             Ricordati di stendere i panni?
                                         </p>
@@ -135,7 +135,7 @@
                                         <p class="messagge-hour">
                                             16:15
                                         </p>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <footer class="footer-input">
                                     <i class="fa-solid fa-face-smile i-footer"></i>
