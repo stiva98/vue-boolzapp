@@ -47,6 +47,7 @@ body {
 .container-link {
     display: flex;
     background-color: #8edafc;
+    height: 3.75rem;
 }
 /*
  Inizializzo la chat dell'header e del main
@@ -65,6 +66,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 3.75rem;
+}
+.header-border {
     border-right: 1px solid gray;
 }
 .img-profile {
@@ -95,6 +99,7 @@ body {
 }
 .hour {
     font-size: xx-small;
+    color: #6b7376;
 }
 .margin {
     margin-left: .5rem;
@@ -105,7 +110,6 @@ body {
 }
 .main-chat-2 {
     height: calc(100vh - 6.25rem);
-    border: 1px solid black;
 }
 .receveid {
     background-color: #d5f9ba;
@@ -172,3 +176,59 @@ body {
 .color-link {
     color: gray;
 }
+.search-link {
+    height: 3.125rem;
+    background-color: #f9f9f9;
+    padding: .3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-icon {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 3.125rem;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+.i-link {
+    color: gray;
+    align-self: center;
+}
+.input-list {
+    flex-grow: 1;
+    border: 1px solid lightgray;
+    border-left: none;
+    height: 100%;
+}
+.input-search {
+    width: 100%;
+    height: 100%;
+    padding: .625rem .3125rem;
+    border: none;
+}
+/*
+ Inizializzo il box delle chat prima in forma statica e poi in forma dinamica
+*/
+.box-chat {
+    background-color: white;
+    height: calc(100vh - (3.75rem + 3.75rem + 3.125rem + 2.5rem));
+    overflow-y: auto;
+}
+.chat {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    border-bottom: 1px solid lightgrey;
+}
+.photo {
+    display: flex;
+}
+.chat-hour {
+    font-size: xx-small;
+    align-self: flex-start;
+    padding: .125rem;
+}
+
+ 

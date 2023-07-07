@@ -31,7 +31,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-4">
-                            <header class="header-chat">
+                            <header class="header-chat header-border">
                                 <div class="col-header">
                                     <div class="col-mini-1">
                                         <img src="img/avatar_1.jpg" alt="avatar_1" class="img-profile">
@@ -60,6 +60,32 @@
                                         <a href="" class="hour margin color-link">Attiva notifiche desktop</a>
                                     </div>
                                 </div>
+                                <section class="search-link">
+                                    <div class="search-icon">
+                                        <i class="fa-solid fa-magnifying-glass i-link"></i>
+                                    </div>
+                                    <div class="input-list">
+                                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="input-search">
+                                    </div>
+                                </section>
+                                <section class="box-chat">
+                                    <div class="chat" v-for="singleContacts in contacts">
+                                        <div class="photo">
+                                            <img :src="singleContacts.avatar" :alt="singleContacts.name" class="img-profile">
+                                            <div class="name-chat">
+                                                <p class="name margin">
+                                                    {{ singleContacts.name }}
+                                                </p>
+                                                <p class="hour margin">
+                                                    Ultimo messaggio inviato
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p class="chat-hour">
+                                            15:30
+                                        </p>
+                                    </div>
+                                </section>
                             </main>
                         </div>
                         <div class="col-6">
