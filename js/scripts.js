@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newMsg: '',
             active: 0,
             contacts: [
                 {
@@ -178,6 +179,16 @@ createApp({
         changeChat(index) {
             //console.log(index)
             this.active = index
+        },
+        addMsg() {
+            //console.log('addMsg')
+            const newMsgReceived = {
+                date: '10/01/2020 16:15:00',
+                message: this.newMsg,
+                status: 'received',
+            };
+            this.contacts[this.active].messages.push(newMsgReceived);
+            this.newMsg = '';
         }
     }
 }).mount('#app');

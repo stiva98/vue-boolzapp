@@ -120,27 +120,11 @@
                                             {{singleMessage.date}}
                                         </p>
                                     </div>
-                                    <!--<div class="receveid dimension">
-                                        <p class="messagge">
-                                            Ricordati di stendere i panni?
-                                        </p>
-                                        <p class="messagge-hour">
-                                            15:50
-                                        </p>
-                                    </div>
-                                    <div class="sent dimension">
-                                        <p class="messagge">
-                                            Tutto fatto!
-                                        </p>
-                                        <p class="messagge-hour">
-                                            16:15
-                                        </p>
-                                    </div>-->
                                 </div>
                                 <footer class="footer-input">
                                     <i class="fa-solid fa-face-smile i-footer"></i>
                                     <div class="container-input">
-                                        <input type="text" class="dimension-input" placeholder="Scrivi un messaggio">
+                                        <input type="text" class="dimension-input" placeholder="Scrivi un messaggio" @keyUp.enter="addMsg()" v-model="newMsg" @keyUp.enter>
                                     </div>
                                     <i class="fa-solid fa-microphone i-footer"></i>
                                 </footer>
