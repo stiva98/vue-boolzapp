@@ -65,26 +65,28 @@
                                         <i class="fa-solid fa-magnifying-glass i-link"></i>
                                     </div>
                                     <div class="input-list">
-                                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="input-search">
+                                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="input-search" v-model="searchUsers" @keyup="filterUsers()">
                                     </div>
                                 </section>
                                 <section class="box-chat">
-                                    <div class="chat" v-for="(singleContacts, index) in contacts" :class="activeSelected(index)" @click="changeChat(index)">
-                                        <div class="photo">
-                                            <img :src="singleContacts.avatar" :alt="singleContacts.name" class="img-profile">
-                                            <div class="name-chat">
-                                                <p class="name margin">
-                                                    {{ singleContacts.name }}
-                                                </p>
-                                                <p class="hour margin">
-                                                    Ultimo messaggio inviato
-                                                </p>
+                                    <template v-for="(singleContacts, index) in contacts">
+                                        <div class="chat" :class="activeSelected(index)" @click="changeChat(index)" v-if="singleContacts.visible">
+                                            <div class="photo">
+                                                <img :src="singleContacts.avatar" :alt="singleContacts.name" class="img-profile">
+                                                <div class="name-chat">
+                                                    <p class="name margin">
+                                                        {{ singleContacts.name }}
+                                                    </p>
+                                                    <p class="hour margin">
+                                                        Ultimo messaggio inviato
+                                                    </p>
+                                                </div>
                                             </div>
+                                            <p class="chat-hour">
+                                                12:00
+                                            </p>
                                         </div>
-                                        <p class="chat-hour">
-                                            12:00
-                                        </p>
-                                    </div>
+                                    </template>
                                 </section>
                             </main>
                         </div>

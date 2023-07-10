@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            searchUsers: '',
             newMsg: '',
             active: 0,
             contacts: [
@@ -197,7 +198,21 @@ createApp({
                 };
                 this.contacts[this.active].messages.push(newMsgSent);
             }, 1000);
+        },
+        filterUsers() {
+            //console.log(this.filterUsers)
+            //console.log(this.searchUsers)
+            const searchUsersLower = this.searchUsers.toLowerCase();
+            this.contacts.forEach(singleContact => {
+                const singleContactLower = singleContact.name.toLowerCase();
+                if(!singleContactLower.includes(searchUsersLower)) {
+                    singleContact.visible = false;
+                }else {
+                    singleContact.visible = true;
+                }
+            });
         }
 
     }
 }).mount('#app');
+
