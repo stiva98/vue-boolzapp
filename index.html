@@ -114,7 +114,7 @@
                             </header>
                             <main class="main-chat">
                                 <div class="container-mini">
-                                    <div class="dimension" v-for="singleMessage in contacts[active].messages" :class="[singleMessage.status]">
+                                    <div class="dimension" v-for="singleMessage in contacts[active].messages" :class="singleMessage.status">
                                         <p class="messagge">
                                             {{singleMessage.message}}
                                         </p>

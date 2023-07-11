@@ -105,7 +105,7 @@ body {
     margin-left: .5rem;
 }
 .main-chat {
-    background-image: url(/img/mine.jpg);
+    background-image: url(../img/mine.jpg);
     height: calc(100vh - 6.25rem);
 }
 .main-chat-2 {
